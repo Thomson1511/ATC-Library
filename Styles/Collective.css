@@ -1,0 +1,8 @@
+header{
+    position: fixed; /* A header pozícióját rögzítjük */
+    width: 100%; /* A header teljes szélessége a képernyő szélességéig terjed */
+    top: 0;
+    text-align: center; /* Szöveg középre igazítása */
+}
+
+object{width: 100%;}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/LOP-Quiz.css">
+  <link rel="stylesheet" href="Styles/Collective.css">
+  <title>LOP Quiz</title>
+</head>
+
+<body>
+
+<header>
+    <div id="navbar-container">
+      <script>document.getElementById("navbar-container").innerHTML = '<object type="text/html" data="navbar.html" ></object>';</script>
+    </div>
+</header>
+
+<div class="card">
+    <div class="route-header">
+      <h2>Routes:</h2>
+      <p id="current-route">Climb to</p>
+    </div>
+    <div class="route-options">
+      <label for="route-select">Constraint:</label>
+      <select id="route-select" onchange = "handleRouteSelectChange()">
+        <option value="Climb to">Climb to</option>
+        <option value="Descent to">Descent to</option>
+        <option value="At">At</option>
+      </select>
+      <span>FL</span>
+      <input type="text" id="route-input" placeholder="Enter FL">
+      <select class="atcross-select" id="atcross-select">
+        <option value ="or below">or below</option>
+        <option value="or above">or above</option>
+      </select>
+    </div>
+    <div class="cross-options" id="crossOptions">
+        <p>cross</p>
+        <p id="cop-name">{COP}</p>
+        <span>FL</span>
+        <input type="text" id="cross-input" placeholder="Enter FL">
+      <select id="cross-select" onchange="handleCrossSelectChange()">
+        <option value="or below">or below</option>
+        <option value="or above">or above</option>
+        <option value="maintaining">maintaining</option>
+        <option value="nothing">nothing</option>
+      </select>
+    </div>
+    <div class="release-options" id="releaseOptions">
+      <p>release for</p>
+      <select id="release-select" onchange="handleReleaseSelectChange()">
+        <option value="Climb">Climb</option>
+        <option value="Descent">Descent</option>
+        <option value="nothing">Nothing</option>
+      </select>
+      <span class="pw">within</span>
+      <input type="text" id="release-input" placeholder="Enter distance">
+      <span>nm</span>
+    </div>
+    <button id="next" onclick="nextRoute()">Next route</button>
+    <button id="reset-button" onclick="resetCard()">Restore card</button>
+  </div>
+
+  <script src="Scripts/LOP-Quiz.js"></script>
+
+
+
+</body>
+</html>
