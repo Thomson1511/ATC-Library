@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/Collective.css">
+    <link rel="stylesheet" href="Styles/Airspace-Classes.css">
     <title>Airspace Classes</title>
 </head>
 
@@ -13,6 +14,79 @@
 </header>
 
 <body>
+
+
+  
+  <div class="card">
+    <div class="class-header">
+      <h2>Class:</h2>
+      <p id="current-class">A</p>
+    </div>
+    <div class="separation-options">
+      <div class="separation-div">
+        <label for="separation-select">Separation:</label>
+      </div>
+      <div class="checkbox-separation">
+        <input type="checkbox" value="All" class="sepcheck">
+        <label for="All">All aircraft</label><br>
+        <input type="checkbox" value="IFR-from-IFR" class="sepcheck">
+        <label for="IFR-from-IFR">IFR from IFR</label><br>
+        <input type="checkbox" value="IFR-from-VFR" class="sepcheck">
+        <label for="IFR-from-VFR">IFR from VFR</label><br>
+        <input type="checkbox" value="Not-provided" class="sepcheck">
+        <label for="Not-provided">Not provided</label><br>
+      </div>
+    </div>
+    <div class="service-options">
+      <div class="service-div">
+        <label>Service:</label>
+      </div>
+      <div class="checkbox-service">
+        <input type="checkbox" value="ATC" class="servcheck">
+        <label for="ATC">ATC</label><br>
+        <input type="checkbox" value="TIaVFR" class="servcheck">
+        <label for="TIaVFR">Traffic information about VFR</label><br>
+        <input type="checkbox" value="TIafap" class="servcheck">
+        <label for="TIafap">Traffic information as far as practical</label><br>
+        <input type="checkbox" value="TAor" class="servcheck">
+        <label for="TAor">traffic avoidance advice on request</label><br>
+        <input type="checkbox" value="ADVS" class="servcheck">
+        <label for="ADVS">ADVS</label><br>
+        <input type="checkbox" value="FIS" class="servcheck">
+        <label for="FIS">FIS if requested</label><br>
+        <input type="checkbox" value="TIaAF" class="servcheck">
+        <label for="TIaAF">traffic information for all flights</label><br>
+      </div>
+    </div>
+    <div class="radio-options" id="radioOptions">
+      <label>Radio:</label>
+      <select class="radio-select" id="radio-select">
+        <option value="Continuous air-ground">Continuous air-ground</option>
+        <option value="Continuous air-ground communications if participationg in ADVS, all IFR flights capable of estabilishing air-ground voice communications">Continuous air-ground communications if participationg in ADVS, all IFR flights capable of estabilishing air-ground voice communications</option>
+        <option value="Capable of estabilishing air-ground voice communications">Capable of estabilishing air-ground voice communications</option>
+        <option value="Not required">Not required</option>
+      </select>
+
+      
+    </div> 
     
+    <div class="clearance-options">
+      <label>ATC Clearence:</label>
+      <input type="radio" name="atc-clearance" value="true">
+      <label for="true">Required</label>
+      <input type="radio" name="atc-clearance" value="false">
+      <label for="false">Not required</label>
+    </div>
+    <div>
+      <label>Speed:</label>
+      <input type="radio" name="atc-speed" value="No">
+      <label for="No">No speed restrictions</label>
+      <input type="radio" name="atc-speed" value="Yes">
+      <label for="Yes">max 250 kts IAS below 10 000 ft</label>
+    </div>
+    <button id="next" onclick="nextClass()">Next class</button>
+</div>
+    
+<script src="Scripts/Airspace-Classes.js"></script>
 </body>
 </html>

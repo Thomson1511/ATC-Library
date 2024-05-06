@@ -1,0 +1,187 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #3498db, #67168a);
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(169, 169, 169, 0.3);
+    position: relative;
+    width: 500px;
+    height: 520px;
+  }
+  
+  .class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .service-options p,
+  .radio-options p {
+    margin-right: 10px;
+  }
+
+  #radio-select{
+    max-width: 400px; /* maximum 100px szélesség */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .select-container {
+    margin-right: 10px;
+  }
+  
+  .select-container label {
+    margin-right: 5px;
+  }
+
+  label{
+    padding-right: 10px;
+  }
+
+  span{
+    padding-left: 10px;
+    padding-right: 2px;
+  }
+  
+  .pw{
+    padding-right: 10px;
+  }
+
+  button#next{
+    margin-top: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  button#next:hover {
+    background-color: #45a049;
+}
+
+.atcross-select{
+  display:none;
+}
+
+button#reset-button {
+  margin-top: 10px;
+  margin-left: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+button#reset-button:hover {
+  background-color: #d32f2f;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    display: inline-block;
+  }
+  
+  .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .custom-select__trigger {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 70px;
+    padding: 10px 10px 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .custom-options {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    z-index: 999;
+  }
+  
+  .custom-options.active {
+    display: block;
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto;
+  }
+  
+  .custom-option {
+    position: relative;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .custom-option:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+  }
+  
+.service-options,
+.radio-options {
+  display: block;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.separation-options, .service-options{
+    display: flex;
+    align-items:start;
+    margin-bottom: 10px;
+}
+.separation-div, .service-div{
+    width: 85px;
+}
+.clearance-options{
+    margin-bottom: 10px;
+}
